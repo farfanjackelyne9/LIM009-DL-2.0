@@ -1,25 +1,63 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lover 2.0 Harry Potter</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <main id="root" class="col-md-12 col-sm-12 col-lg-12">
-      <section class="col-xs-12 col-md-3 col-sm-3 col-lg-3">
-        <header class="col-xs-4 col-md-12 col-sm-12 col-lg-12">logo</header>
-        <section class="col-xs-4 col-md-12 col-sm-12 col-lg-12">ordenar</section>
-        <section class="col-xs-4 col-md-12 col-sm-12 col-lg-12">filtrar</section>
-      </section>
-      <section class="col-md-9 col-sm-9 col-lg-9">
-        <h2>Personajes de la Saga de harry Potter</h1>
-        <section class="col-xs-6 col-md-6 col-sm-6 col-lg-6"> harry</section>
-        <section class="col-xs-6 col-md-6 col-sm-6 col-lg-6"> harry</section>
-      </section>
 
-    </main>
-    <script src="data.js"></script>
-    <script src="main.js"></script>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <title>Data Lover 2.0 Harry Potter</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main id="root">
+    <section id="menu" class="col-xs-12 col-md-3 col-sm-3 col-lg-3">
+      <header class="col-xs-4 col-md-12 col-sm-12 col-lg-12"><img class="logo" src="logo/logoharrypotter.png"></header>
+      <section class="col-xs-4 col-md-12 col-sm-12 col-lg-12">
+        <h4>Ordenar por edad</h4>
+            <div class="box col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              <img src="flecha/img-ascendente.JPG">
+              <h5>Ascendente</h5>
+            </div>
+            <div class=" box col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              <img src="flecha/img-descendente.JPG">
+              <h5>Descendente</h5>
+            </div>
+      </section>
+      <section class="col-xs-4 col-md-12 col-sm-12 col-lg-12">
+        <h4>Filtrar por</h4>
+          <div class="filter col-xs-4 col-sm-6 col-md-6 col-lg-6">
+            <h5>Género</h5>
+          </br>
+            <h5>Rol</h5>
+          </br> 
+            <h5>Casas</h5>
+          </div>
+          <div class="col-xs-8 col-sm-6 col-md-6 col-lg-6">
+            <select name="genero" id="genero">
+              <option value="female">Female</option>
+              <option value="male">Male</option>
+            </select>
+            <select  name="rol" id="rol">
+              <option value="student">student</option>
+              <option value="staff">staff</option>
+            </select>
+            <select  name="casa" id="casa">
+              <option value="gryffindor">Gryffindor</option>
+              <option value="slytherin">Slytherin</option>
+              <option value="ravenclaw">Ravenclaw</option>
+              <option value="hufflepuff">Hufflepuff</option>
+            </select>
+          </div>
+      </section>
+    </section>
+    <section id="characters" class="col-xs-12 col-md-9 col-sm-9 col-lg-9">
+      <h2>Personajes de la Saga de harry Potter</h1>
+        <section class="col-xs-6 col-md-6 col-sm-6 col-lg-6"> harry</section>
+        <section class="col-xs-6 col-md-6 col-sm-6 col-lg-6"> harry</section>
+    </section>
+
+  </main>
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+</body>
+
 </html>
