@@ -10,6 +10,29 @@
     background: rgba(237, 238, 251, 0.73);
     border:1px solid black;
 }
+#caja-perso{
+    /* border:1px solid black; */
+    padding: 10px;
+    /* background: red; */
+}
+#caja-m{
+    border-radius: 10px;
+    border:1px solid black;
+    background: white;
+}
+#caja{
+    height: 100px;
+    width: 100px; 
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 100% auto;
+    display:block;
+    margin:auto;
+    border-radius:50%;
+}
+.nombres{
+    text-align: center;
+}
 .box{
     padding-top:20px; 
     display: flex;
