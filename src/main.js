@@ -13,12 +13,12 @@ const paintData = (datos) => {
     let newData = "";
     for (let i = 0; i < datos.length; i++) {
         newData += `
-        <section id="caja-perso" class="col-xs-6 col-md-4 col-sm-6 col-lg-4">
-         <section id="caja-m">
-           <img  id="caja" src="${datos[i].image}"></img>
+        <section id="box-characters" class="col-xs-6 col-md-4 col-sm-6 col-lg-4">
+         <section id="box-act">
+           <img  id="img-act" src="${datos[i].image}"></img>
            </br>
-           <strong><p class="nombres">${datos[i].name}</p></strong>
-           <p class="nombres">${datos[i].house}</p>
+           <strong><p class="tittle-box">${datos[i].name}</p></strong>
+           <p class="tittle-box">${datos[i].house}</p>
            </br>
          <div>
            Especie

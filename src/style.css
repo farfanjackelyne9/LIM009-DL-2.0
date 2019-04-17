@@ -5,22 +5,21 @@
 }
 #menu{
     background: rgba(13, 13, 26, 1);
+
 }
 #characters{
     background: rgba(237, 238, 251, 0.73);
     border:1px solid black;
 }
-#caja-perso{
-    /* border:1px solid black; */
+#box-characters{
     padding: 10px;
-    /* background: red; */
 }
-#caja-m{
+#box-act{
     border-radius: 10px;
     border:1px solid black;
     background: white;
 }
-#caja{
+#img-act{
     height: 100px;
     width: 100px; 
     background-repeat: no-repeat;
@@ -30,28 +29,28 @@
     margin:auto;
     border-radius:50%;
 }
-.nombres{
+.tittle-box{
     text-align: center;
+}
+.box-menu{
+    padding:30px 5px 30px 0px;
 }
 .box{
     padding-top:20px; 
     display: flex;
 }
 .logo{
-    
     width:90%;
-    padding:1cm 0cm 1.1cm 0.3cm; 
+    padding:1.5cm 0cm 1cm 0.3cm; 
 }
 .filter{
     padding-top:10px;    
 }
-h5{ 
-    padding-left: 2px;
+h4,h3{ 
     color: rgba(254, 249, 249, 1);
 }
-h4{
-    padding-top: 6px;
-    color:rgba(254, 249, 249, 1);
+h3{
+    padding: 0 0 15px;
 }
 h2{
     color:rgba(89, 85, 85, 1);
@@ -66,7 +65,6 @@ select{
     background: rgba(196, 196, 196, 1);
     width:2.1cm; 
 }
-
 [class*="col-"]{
     float: left;
 }
