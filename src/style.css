@@ -32,6 +32,11 @@
     margin:auto;
     border-radius:50%;
 }
+#bander{
+    height: 50px;
+    width: 30px; 
+
+}
 .tittle-box{
     text-align: center;
 }
