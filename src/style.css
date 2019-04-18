@@ -15,7 +15,7 @@
     border:1px solid black;
 }
 #box-characters{
-    padding: 10px;
+    padding:10px;
 }
 #box-act{
     border-radius: 10px;
@@ -23,8 +23,8 @@
     background: white;
 }
 #img-act{
-    height: 100px;
-    width: 100px; 
+    height: 140px;
+    width: 140px; 
     background-repeat: no-repeat;
     background-position: 50%;
     background-size: 100% auto;
@@ -32,10 +32,22 @@
     margin:auto;
     border-radius:50%;
 }
-#bander{
+#container-characters{
+    padding:20px;
+}
+.data{
+    padding: 0 0 0 28px;
+}
+.icon{
+    height: 20px;
+    width: 40px;
+    padding: 0 0 0 15px;
+}
+.bander{
     height: 50px;
-    width: 30px; 
-
+    width: 50px;
+    float: right;
+    padding-right: 8px;
 }
 .tittle-box{
     text-align: center;
@@ -91,6 +103,9 @@ select{
     .col-sm-3{width:25%} 
 }
 @media(max-width:1199px) and (min-width:992px){
+    #box-characters{
+        padding:40px;
+    }
     .col-md-12{width:100%}
     .col-md-6{width:50%}
     .col-md-9{width:75%}
@@ -98,6 +113,9 @@ select{
     .col-md-3{width:25%} 
 }
 @media(min-width:1200px){
+    #box-characters{
+        padding:40px;
+    }
     .col-lg-12{width:100%}
     .col-lg-9{width:75%}
     .col-lg-6{width:50%}
