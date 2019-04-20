@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="utf-8">
   <title>Data Lover 2.0 Harry Potter</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
   <main id="root">
     <section id="menu" class="col-xs-12 col-md-3 col-sm-3 col-lg-3">
+        <!-- <audio controls loop="loop" autoplay="autoplay">
+          <source src="harry potter musica.mp3" type="audio/mp3">
+          <source src="harry potter musica.ogg" type="audio/ogg">
+        </audio> -->
       <header class="col-xs-4 col-md-12 col-sm-12 col-lg-12"><img class="logo" src="logo/logoharrypotter.png"></header>
       <section class="box-menu col-xs-4 col-md-12 col-sm-12 col-lg-12">
         <h3>Ordenar por edad</h3>
@@ -30,19 +32,22 @@
           <h4>Casas</h4>
         </div>
         <div class="col-xs-8 col-sm-6 col-md-6 col-lg-6">
-          <select name="genero" id="genero">
+          <select name="genero" class="genero">
+            <option value="genero">genero</option>
             <option value="female">Female</option>
             <option value="male">Male</option>
           </select>
-          <select name="rol" id="rol">
+          <select name="rol" class="rol">
+            <option value="rol">rol</option>
             <option value="student">student</option>
             <option value="staff">staff</option>
           </select>
-          <select name="casa" id="casa">
-            <option value="gryffindor">Gryffindor</option>
-            <option value="slytherin">Slytherin</option>
-            <option value="ravenclaw">Ravenclaw</option>
-            <option value="hufflepuff">Hufflepuff</option>
+          <select name="casa" class="casa">
+            <option value="casa">casa</option>
+            <option value="Gryffindor">Gryffindor</option>
+            <option value="Slytherin">Slytherin</option>
+            <option value="Ravenclaw">Ravenclaw</option>
+            <option value="Hufflepuff">Hufflepuff</option>
           </select>
         </div>
       </section>
@@ -56,6 +61,6 @@
   </main>
   <script src="data.js"></script>
   <script src="main.js"></script>
+  <!-- <embed src="harry potter musica.mp3" autostart hidden > -->
 </body>
-
 </html>

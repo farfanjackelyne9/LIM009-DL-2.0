@@ -1,14 +1,17 @@
 /* Manejo del DOM */
 const containerCharacters = document.getElementById("container-characters");
 
-const data = () => {
+
+const getJson=()=>{
   fetch('https://raw.githubusercontent.com/farfanjackelyne9/LIM009-DL-2.0/master/src/data/potter.json')
-    .then(res => res.json())
-    .then(datos => {
-      paintData(datos);
-    });
+  .then(response=>response.json())
+  .then(data=>{
+    const totalData = data;
+    dataPotter(totalData);
+  });
 };
-data();
+getJson();
+const dataPotter = (valuesPotter)=>{
 const paintData = (datos) => {
   let newData = "";
   for (let i = 0; i < datos.length; i++) {
@@ -52,3 +55,58 @@ const paintData = (datos) => {
   }
   containerCharacters.innerHTML = newData;
 };
+paintData(valuesPotter);
+const home =document.getElementsByClassName("casa");
+for(let i=0;i<home.length;i++){
+  console.log(home[i])
+  home[i].addEventListener("change",()=>{
+    let valor = home[i].value;
+    if(valor === "Gryffindor"){
+      let gryff =window.filterHom(valuesPotter,valor);
+      paintData(gryff);
+    }
+    if(valor === "Slytherin"){
+      let slyth=window.filterHom(valuesPotter,valor);
+      paintData(slyth);
+    }
+    if(valor === "Ravenclaw"){
+      let raven=window.filterHom(valuesPotter,valor);
+      paintData(raven);
+    }
+    if(valor === "Hufflepuff"){
+      let huffl=window.filterHom(valuesPotter,valor);
+      paintData(huffl);
+    }
+  })
+};
+
+const gen =document.getElementsByClassName("genero");
+
+for(let i=0 ;i< gen.length; i++){
+  gen[i].addEventListener("change",()=>{
+    let valor = gen[i].value;
+    if(valor === "female"){
+      let fem = window.filterGen(valuesPotter,valor);
+      paintData(fem);
+    }else if(valor ==="male"){
+      let male= window.filterGen(valuesPotter,valor);
+      paintData(male);
+    }
+  })
+};
+const rol =document.getElementsByClassName("rol");
+
+for(let i=0; i<rol.length;i++){
+  rol[i].addEventListener("change",()=>{
+    let valor = rol[i].value;
+    if(valor === "student"){
+      let stud = window.filterStud(valuesPotter);
+      paintData(stud);
+    }else if(valor === "staff"){
+      let staff= window.filterStaff(valuesPotter);
+      paintData(staff);
+    }
+  })
+}
+
+}
