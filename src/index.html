@@ -1,26 +1,32 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <title>Data Lover 2.0 Harry Potter</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+
+<body background="imagenes/tumblr_oqzes9aZJT1rbvurjo1_400.gif">
   <main id="root">
     <section id="menu" class="col-xs-12 col-md-3 col-sm-3 col-lg-3">
-        <!-- <audio controls loop="loop" autoplay="autoplay">
-          <source src="harry potter musica.mp3" type="audio/mp3">
-          <source src="harry potter musica.ogg" type="audio/ogg">
-        </audio> -->
+        <audio hidden controls loop="loop" preload="auto" autoplay="autoplay">
+            <source src="musica/harry potter musica.mp3" type="audio/mp3">
+            <source src="musica/harry potter musica.ogg" type="audio/ogg">
+          </audio>
       <header class="col-xs-4 col-md-12 col-sm-12 col-lg-12"><img class="logo" src="logo/logoharrypotter.png"></header>
       <section class="box-menu col-xs-4 col-md-12 col-sm-12 col-lg-12">
         <h3>Ordenar por edad</h3>
         <div class="box col-xs-12 col-sm-12 col-md-12 col-lg-12">
-          <img src="flecha/img-ascendente.JPG">
+          <a id="btnA" href="">
+            <img src="flecha/img-ascendente.JPG">
+          </a>
           <h4>Ascendente</h4>
         </div>
         <div class=" box col-xs-12 col-sm-12 col-md-12 col-lg-12">
-          <img src="flecha/img-descendente.JPG">
+          <a id="btnD" href="">
+            <img src="flecha/img-descendente.JPG">
+          </a>
           <h4>Descendente</h4>
         </div>
       </section>
@@ -54,13 +60,13 @@
     </section>
     <section id="characters" class="col-xs-12 col-md-9 col-sm-9 col-lg-9">
       <h2>Personajes de la Saga de Harry Potter</h2>
-        <div id="container-characters">
-        </div>
+      <div id="container-characters">
+      </div>
     </section>
 
   </main>
   <script src="data.js"></script>
   <script src="main.js"></script>
-  <!-- <embed src="harry potter musica.mp3" autostart hidden > -->
 </body>
+
 </html>
