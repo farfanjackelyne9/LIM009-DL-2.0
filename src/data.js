@@ -4,57 +4,41 @@
 // puedes ver como agregamos la función a nuestro objeto global window
 
 const filterGen = (datos, condition) => {
-   let newData = [];
-   for (let i = 0; i < datos.length; i++) {
-      if (datos[i].gender === condition) {
-         newData.push(datos[i]);
-      }
-   }
-   return newData;
+  let newData = datos.filter(datos => datos.gender === condition);
+  return newData;
 };
-window.filterGen = filterGen;
+
 
 const filterHom = (datos, condition) => {
-   let newData = [];
-   for (let i = 0; i < datos.length; i++) {
-      if (datos[i].house === condition) {
-         newData.push(datos[i]);
-      }
-   }
-   return newData
+  let newData = datos.filter(datos => datos.house === condition);
+  return newData;
 };
-window.filterHom = filterHom;
+
 
 const filterStud = (datos) => {
-   let newData = [];
-   for (let i = 0; i < datos.length; i++) {
-    if (datos[i].hogwartsStudent === true) {
-      newData.push(datos[i]);
-    }
-  }
+  let newData = datos.filter(datos => datos.hogwartsStudent === true);
   return newData;
 };
-window.filterStud = filterStud;
+
 
 const filterStaff = (datos) => {
-  let newData = [];
-  for (let i = 0; i < datos.length; i++) {
-    if (datos[i].hogwartsStaff === true) {
-      newData.push(datos[i]);
-    }
-  }
+  let newData = datos.filter(datos => datos.hogwartsStaff === true);
   return newData;
 };
-window.filterStaff = filterStaff;
 
-const sortData = (datos) =>{
- let order = datos.sort((a,b)=>{
-    if(a.yearOfBirth > b.yearOfBirth){
-       return 1;
-    }else{
-    return -1;
+
+const sortData = (datos) => {
+  let order = datos.sort((a, b) => {
+    if (a.yearOfBirth > b.yearOfBirth) {
+      return 1;
+    } else {
+      return -1;
     }
- });
- return order; 
+  });
+  return order;
 };
- window.sortData =sortData;
+window.sortData = sortData;
+window.filterGen = filterGen;
+window.filterHom = filterHom;
+window.filterStud = filterStud;
+window.filterStaff = filterStaff;
