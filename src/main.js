@@ -107,4 +107,16 @@ const dataPotter = (valuesPotter) => {
       }
     });
   }
+  let newYear=[];
+  for(let i=0;i<valuesPotter.length;i++){
+   if (typeof valuesPotter[i].yearOfBirth === "number"){
+     newYear.push(valuesPotter[i]);
+   }
+  }
+  document.getElementById("btnD").addEventListener("click",()=>{
+    paintData(window.sortData(newYear));
+  })
+  document.getElementById("btnA").addEventListener("click",()=>{
+    paintData(window.sortData(newYear).reverse());
+  })
 };

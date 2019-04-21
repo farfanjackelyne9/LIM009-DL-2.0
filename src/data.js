@@ -46,3 +46,15 @@ const filterStaff = (datos) => {
   return newData;
 };
 window.filterStaff = filterStaff;
+
+const sortData = (datos) =>{
+ let order = datos.sort((a,b)=>{
+    if(a.yearOfBirth > b.yearOfBirth){
+       return 1;
+    }else{
+    return -1;
+    }
+ });
+ return order; 
+};
+ window.sortData =sortData;
