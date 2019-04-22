@@ -46,27 +46,6 @@
 #huf:hover{
     background-color:rgb(216, 190, 44);
 }
-/* #box-act #sly:hover { 
-  border-radius:10px;
-  background-color:rgb(21, 126, 94);
-  -webkit-transition:all 500ms ease;
-  -o-transition:all 500ms ease;
-  transition:all 500ms ease;
-}
-#box-act #rav:hover { 
-  border-radius:10px;
-  background-color:#122058;
-  -webkit-transition:all 500ms ease;
-  -o-transition:all 500ms ease;
-  transition:all 500ms ease;
-}
-#box-act #huf:hover { 
-  border-radius:10px;
-  background-color:rgb(216, 190, 44);
-  -webkit-transition:all 500ms ease;
-  -o-transition:all 500ms ease;
-  transition:all 500ms ease;
-} */
 #img-act{
       height: 140px;
       width: 140px; 
@@ -115,7 +94,8 @@
       padding:1.5cm 0cm 1cm 0.3cm; 
   }
   .filter{
-      padding-top:10px;    
+      padding:10px;
+      
   }
   body{
       background-attachment: fixed;
@@ -123,14 +103,14 @@
   }
   h4,h3{ 
       color: rgba(254, 249, 249, 1);
+      padding: 0 0 15px;
   }
-  h3{
+  h4{
       padding: 0 0 15px;
   }
   h1{
       color:white;
       padding: 50px 0 29px 63px; 
-      /* width: 346px; */
       font-weight: normal;
       font-size: 28px;
   }
@@ -169,6 +149,15 @@
   @media(min-width:1200px){
       #box-characters{
           padding:40px;
+      }
+      h1{
+        font-size: 38px;
+      }
+      h3,h4{
+          padding: 0 0 15px 20px;
+      }
+      .box{
+        padding: 20px 0 15px 50px;
       }
       .col-lg-12{width:100%}
       .col-lg-9{width:75%}
