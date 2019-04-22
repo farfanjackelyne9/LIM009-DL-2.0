@@ -5,28 +5,69 @@
     /* font-family: 'Roboto', sans-serif; */
     font-family: 'Open Sans', sans-serif;
     /* font-family: 'Montserrat', sans-serif; */
-  }
-  #menu{
-      background: rgba(13, 13, 26, 1);
-      position: fixed;
-      overflow: hidden;
-      height: 100%;
-  
-  }
-  #characters{
-      border:1px solid black;
-      margin-left: 25%;
-      height: 100%;
-  }
-  #box-characters{
-      padding:10px;
-  }
-  #box-act{
-      border-radius: 10px;
-      border:1px solid black;
-      background: white;
-  }
-  #img-act{
+}
+#menu{
+    background: rgba(13, 13, 26, 1);
+    position: fixed;
+    overflow: hidden;
+    height: 100%;
+}
+#characters{
+    border:1px solid black;
+    margin-left: 25%;
+    height: 100%;
+}
+#box-characters{
+    padding:10px;
+}
+#box-act{
+    border-radius: 10px;
+    border:1px solid black;
+    background: white;
+    -webkit-transition:all 500ms ease;
+    -o-transition:all 500ms ease;
+    transition:all 500ms ease;
+}
+#gry #sly #rav #huf { 
+    border-radius:10px;
+    -webkit-transition:all 500ms ease;
+    -o-transition:all 500ms ease;
+    transition:all 500ms ease;
+}
+#gry:hover{
+    background-color: rgba(189, 3, 3, 0.781);
+}
+#sly:hover{
+    background-color:rgb(21, 126, 94);
+}
+#rav:hover{
+    background-color:#122058d5;
+}
+#huf:hover{
+    background-color:rgb(216, 190, 44);
+}
+/* #box-act #sly:hover { 
+  border-radius:10px;
+  background-color:rgb(21, 126, 94);
+  -webkit-transition:all 500ms ease;
+  -o-transition:all 500ms ease;
+  transition:all 500ms ease;
+}
+#box-act #rav:hover { 
+  border-radius:10px;
+  background-color:#122058;
+  -webkit-transition:all 500ms ease;
+  -o-transition:all 500ms ease;
+  transition:all 500ms ease;
+}
+#box-act #huf:hover { 
+  border-radius:10px;
+  background-color:rgb(216, 190, 44);
+  -webkit-transition:all 500ms ease;
+  -o-transition:all 500ms ease;
+  transition:all 500ms ease;
+} */
+#img-act{
       height: 140px;
       width: 140px; 
       background-repeat: no-repeat;

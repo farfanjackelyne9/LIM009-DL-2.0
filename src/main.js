@@ -19,19 +19,19 @@ const dataPotter = (valuesPotter) => {
         <section id="box-characters" class="col-xs-6 col-md-4 col-sm-6 col-lg-4">
          <section id="box-act">`;
       if (element.house === "Gryffindor") {
-        newData += `<div ><img class="bander" src="imagenes/bandera-roja.JPG"</div>`;
+        newData += `<div id="gry"><img class="bander" src="imagenes/bandera-roja.JPG"</div>`;
       }
       if (element.house === "Slytherin") {
-        newData += `<div ><img class="bander" src="imagenes/bandera-verde.JPG"</div>`;
+        newData += `<div id="sly"><img class="bander" src="imagenes/bandera-verde.JPG"</div>`;
       }
       if (element.house === "Ravenclaw") {
-        newData += `<div ><img class="bander" src="imagenes/bandera-azul.JPG"</div>`;
+        newData += `<div id="rav"><img class="bander" src="imagenes/bandera-azul.JPG"</div>`;
       }
       if (element.house === "Hufflepuff") {
-        newData += `<div ><img class="bander" src="imagenes/bandera-amarilla.JPG"</div>`;
+        newData += `<div id="huf"><img class="bander" src="imagenes/bandera-amarilla.JPG"</div>`;
       }
       if (element.house === "") {
-        newData += `<div ><img class="bander" src="imagenes/bandera-vacia.JPG"</div>`;
+        newData += `<div ><img id="hollow" class="bander" src="imagenes/bandera-vacia.JPG"</div>`;
       }
       newData += `</br><img  id="img-act" src="${element.image}"></img></br>
            <strong><p class="tittle-box">${element.name}</p></strong>
@@ -61,19 +61,19 @@ const dataPotter = (valuesPotter) => {
     home[i].addEventListener("change", () => {
       let valor = home[i].value;
       if (valor === "Gryffindor") {
-        let gryff = window.filterHom(valuesPotter, valor);
+        let gryff = Global.filterHom(valuesPotter, valor);
         paintData(gryff);
       }
       if (valor === "Slytherin") {
-        let slyth = window.filterHom(valuesPotter, valor);
+        let slyth = Global.filterHom(valuesPotter, valor);
         paintData(slyth);
       }
       if (valor === "Ravenclaw") {
-        let raven = window.filterHom(valuesPotter, valor);
+        let raven = Global.filterHom(valuesPotter, valor);
         paintData(raven);
       }
       if (valor === "Hufflepuff") {
-        let huffl = window.filterHom(valuesPotter, valor);
+        let huffl = Global.filterHom(valuesPotter, valor);
         paintData(huffl);
       }
     });
@@ -85,10 +85,10 @@ const dataPotter = (valuesPotter) => {
     gen[i].addEventListener("change", () => {
       let valor = gen[i].value;
       if (valor === "female") {
-        let fem = window.filterGen(valuesPotter, valor);
+        let fem = Global.filterGen(valuesPotter, valor);
         paintData(fem);
       } else if (valor === "male") {
-        let male = window.filterGen(valuesPotter, valor);
+        let male = Global.filterGen(valuesPotter, valor);
         paintData(male);
       }
     });
@@ -99,10 +99,10 @@ const dataPotter = (valuesPotter) => {
     rol[i].addEventListener("change", () => {
       let valor = rol[i].value;
       if (valor === "student") {
-        let stud = window.filterStud(valuesPotter);
+        let stud = Global.filterStud(valuesPotter);
         paintData(stud);
       } else if (valor === "staff") {
-        let staff = window.filterStaff(valuesPotter);
+        let staff = Global.filterStaff(valuesPotter);
         paintData(staff);
       }
     });
@@ -114,9 +114,9 @@ const dataPotter = (valuesPotter) => {
     }
   }
   document.getElementById("btnD").addEventListener("click", () => {
-    paintData(window.sortData(newYear));
+    paintData(Global.sortData(newYear));
   });
   document.getElementById("btnA").addEventListener("click", () => {
-    paintData(window.sortData(newYear).reverse());
+    paintData(Global.sortData(newYear).reverse());
   });
 };

@@ -37,8 +37,11 @@ const sortData = (datos) => {
   });
   return order;
 };
-window.sortData = sortData;
-window.filterGen = filterGen;
-window.filterHom = filterHom;
-window.filterStud = filterStud;
-window.filterStaff = filterStaff;
+
+window.Global = {
+  filterStaff,
+  filterStud,
+  filterHom,
+  filterGen,
+  sortData,
+};
