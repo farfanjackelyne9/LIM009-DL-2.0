@@ -47,8 +47,6 @@ describe('sortData', () => {
     expect(Global.sortData([{ "yearOfBirth": 1990 }, { "yearOfBirth": 1800 }])).toEqual([{"yearOfBirth": 1800}, {"yearOfBirth": 1990}]);
   });
 
-
-
   it('debería retornar un array ordenado ', () => {
     expect(Global.sortData([{"yearOfBirth": 1800}, {"yearOfBirth": 1800}])).toEqual([{ "yearOfBirth": 1800 }, { "yearOfBirth": 1800 }]);
   });
