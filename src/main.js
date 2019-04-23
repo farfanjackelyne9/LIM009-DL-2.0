@@ -1,57 +1,115 @@
 /* Manejo del DOM */
 const containerCharacters = document.getElementById("container-characters");
-
-
-const getJson = () => {
-  fetch('https://raw.githubusercontent.com/farfanjackelyne9/LIM009-DL-2.0/master/src/data/potter.json')
-    .then(response => response.json())
-    .then(data => {
+const getJson = (url) => {
+  fetch(url)
+    .then((response) => response.json())
+    .then((data) => {
       const totalData = data;
       dataPotter(totalData);
     });
 };
-getJson();
+getJson('https://raw.githubusercontent.com/farfanjackelyne9/LIM009-DL-2.0/master/src/data/potter.json');
 const dataPotter = (valuesPotter) => {
   const paintData = (datos) => {
     let newData = "";
     datos.forEach((element) => {
       newData += `
         <section id="box-characters" class="col-xs-6 col-md-4 col-sm-6 col-lg-4">
-         <section id="box-act">`;
+         <section id="box-act" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">`;
       if (element.house === "Gryffindor") {
-        newData += `<div id="gry"><img class="bander" src="imagenes/bandera-roja.JPG"</div>`;
+        newData += `
+        <div id="gry">
+          <img class="bander" src="imagenes/bandera-roja.JPG">
+        </div>`;
       }
       if (element.house === "Slytherin") {
-        newData += `<div id="sly"><img class="bander" src="imagenes/bandera-verde.JPG"</div>`;
+        newData += `
+        <div id="sly">
+          <img class="bander" src="imagenes/bandera-verde.JPG">
+        </div>`;
       }
       if (element.house === "Ravenclaw") {
-        newData += `<div id="rav"><img class="bander" src="imagenes/bandera-azul.JPG"</div>`;
+        newData += `
+        <div id="rav">
+          <img class="bander" src="imagenes/bandera-azul.JPG">
+        </div>`;
       }
       if (element.house === "Hufflepuff") {
-        newData += `<div id="huf"><img class="bander" src="imagenes/bandera-amarilla.JPG"</div>`;
+        newData += `
+        <div id="huf">
+          <img class="bander" src="imagenes/bandera-amarilla.JPG">
+        </div>`;
       }
       if (element.house === "") {
-        newData += `<div ><img id="hollow" class="bander" src="imagenes/bandera-vacia.JPG"</div>`;
+        newData += `
+        <div >
+          <img id="hollow" class="bander" src="imagenes/bandera-vacia.JPG">
+        </div>`;
       }
-      newData += `</br><img  id="img-act" src="${element.image}"></img></br>
-           <strong><p class="tittle-box">${element.name}</p></strong>
-           <p class="tittle-box">${element.house}</p></br>
-         <div><img class="icon" src="icono/icono-especies.jpeg"></img>Especie</br><strong><p class="data">${element.species}</p></strong></br>`;
+      newData += `
+      <div class="img-act1 col-xs-9 col-sm-9 col-md-9 col-lg-9">
+        <img  id="img-act" src="${element.image}">
+      </div>
+      <div class="caract col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <p class="tittle-name">${element.name}</p>
+        <p class="tittle-house">${element.house}</p>
+      </div>
+       <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+         <img class="icon" src="icono/icono-especies.jpeg">
+       </div>  
+       <div class="caract col-xs-9 col-sm-9 col-md-9 col-lg-9">
+         <p class="sub-ti">Especie</p>
+         <p class="data">${element.species}</p>
+       </div>`;
       if (element.hogwartsStudent === true) {
-        newData += `</br><img class="icon" src="icono/icono-estudiantes.jpeg">Rol</br><strong><p class="data">${"Estudiante"}</p></strong></br>`;
+        newData += `
+      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        <img class="icon" src="icono/icono-estudiantes.jpeg">
+      </div>
+      <div class="caract col-xs-9 col-sm-9 col-md-9 col-lg-9">
+        <p class="sub-ti">Rol</p>
+        <p class="data">Estudiante</p>
+      </div>`;
       }
       if (element.hogwartsStudent === false) {
-        newData += `</br><img class="icon" src="icono/icono-estudiantes.jpeg">Rol</br><strong><p class="data">${"Staff"}</p></br></strong>`;
+        newData += `
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"> 
+        <img class="icon" src="icono/icono-estudiantes.jpeg">
+        </div>
+        <div class="caract col-xs-9 col-sm-9 col-md-9 col-lg-9">
+         <p class="sub-ti">Rol</p>
+         <p class="data">Staff</p>
+         </div>`;
       }
       if (typeof element.yearOfBirth === "number") {
-        newData += `</br><img class="icon" src="icono/icono-edad.jpeg">Edad</br><strong><p class="data">${2019 - element.yearOfBirth}</p></strong></br>`;
+        newData += `
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"> 
+        <img class="icon" src="icono/icono-edad.jpeg">
+        </div>
+        <div class="caract col-xs-9 col-sm-9 col-md-9 col-lg-9">
+         <p class="sub-ti">Edad</p>
+         <p class="data">${2019 - element.yearOfBirth}</p>
+         </div>`;
       } else {
-        newData += `</br><img class="icon" src="icono/icono-edad.jpeg">Edad</br><strong><p class="data">${"No encontrado"}</p></strong></br>`;
+        newData += `
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"> 
+        <img class="icon" src="icono/icono-edad.jpeg">
+        </div>
+        <div class="caract col-xs-9 col-sm-9 col-md-9 col-lg-9">
+         <p class="sub-ti">Edad</p>
+        <p class="data">No encontrado</p>
+        </div>`;
       }
-      newData += `</br><img class="icon" src="icono/icono-actores.jpeg">Actor</br><strong><p class="data">${element.actor}</p></strong></br></br>
-         </div>
-         </section>
-        </section>`;
+      newData += `
+      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"> 
+        <img class="icon" src="icono/icono-actores.jpeg">
+      </div>
+      <div class="caract col-xs-9 col-sm-9 col-md-9 col-lg-9">
+        <p class="sub-ti">Actor</p>
+        <p class="data">${element.actor}</p>
+      </div> 
+        </section>
+       </section>`;
     });
     containerCharacters.innerHTML = newData;
   };
@@ -78,9 +136,7 @@ const dataPotter = (valuesPotter) => {
       }
     });
   }
-
   const gen = document.getElementsByClassName("genero");
-
   for (let i = 0; i < gen.length; i++) {
     gen[i].addEventListener("change", () => {
       let valor = gen[i].value;
@@ -94,7 +150,6 @@ const dataPotter = (valuesPotter) => {
     });
   }
   const rol = document.getElementsByClassName("rol");
-
   for (let i = 0; i < rol.length; i++) {
     rol[i].addEventListener("change", () => {
       let valor = rol[i].value;
